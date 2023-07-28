@@ -75,7 +75,7 @@ function Home({ providers }) {
               Sign in
             </button>
 
-            <Link href="api/[...nextauth].js" className="w-full my-3">
+            <div  className="w-full my-3">
               <button
                 className="w-full border p-3 rounded-full  text-black font-semibold"
                 onClick={() => {
@@ -84,7 +84,7 @@ function Home({ providers }) {
               >
                 Continue with Google{" "}
               </button>
-            </Link>
+            </div>
           </div>
         </div>
 
