@@ -1,18 +1,14 @@
 import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
 
-function HeaderLink({ Icon, text, feed}) {
+function HeaderLink({ Icon, text, feed }) {
   const { data: session } = useSession();
-   
-  return (
-    <div
-      className=" flex flex-col justify-center items-center"
-    >
-   
 
-<i className="h-3 w-3">
-         <Image src={Icon} alt="asd"  />
-      </i>      
+  return (
+    <div className=" flex flex-col justify-center items-center">
+      <i className="h-3 w-3">
+        <Image src={Icon} alt="asd" />
+      </i>
 
       <h4
         className={`text-sm ${
@@ -21,8 +17,6 @@ function HeaderLink({ Icon, text, feed}) {
       >
         {text}
       </h4>
-
-     
     </div>
   );
 }

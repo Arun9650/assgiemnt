@@ -22,7 +22,7 @@ const HeroSecondary = () => {
     fetchData();
   }, []);
 
-  console.log('data',data);
+  // console.log('data',data);
 
   const slides = [1, 2];
   const goToPrevious = () => {
