@@ -7,13 +7,12 @@ const HeroSecondary = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // console.log(data);
 
   useEffect(() => {
     // Fetch data from the FastAPI backend
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:8000/'); // Replace with your backend URL
+        const response = await axios.get('https://backend-assginment-python-f2be.vercel.app/'); // Replace with your backend URL
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -39,13 +38,13 @@ const HeroSecondary = () => {
   };
 
   return (
-    <div className="h-screen border-black relative  border-4 py-4 flex items-center justify-center">
-      <div className="flex border-pink-500 absolute top-0  left-0    border-4 items-center justify-center">
-        <div className="grid grid-cols-2 grid-rows-2   border-green-400 border-4">
+    <div className="h-screen  relative py-4 flex items-center justify-center">
+      <div className="flex  absolute top-0  left-0   items-center justify-center">
+        <div className="grid grid-cols-2 grid-rows-2   ">
           
 
            {data ? (<>{data.items?.map((item) => (
-            <div key={item.id} className="flex overflow-y border-4 border-blue-500 w-full  ">
+            <div key={item.id} className="flex overflow-y  w-full  ">
                 <div className="flex flex-col items-start justify-center p-4 ">
             <p style={{ fontSize: "40px", color: "#8f5849" }}>
              {item.heading}
