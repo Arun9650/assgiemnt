@@ -14,9 +14,10 @@ import Component from "../../components/auth";
 
 import HeroSecondary from './hero-scondry'
 
-function Home({ providers }) {
+function Home({ data }) {
   const { data: session,status  } = useSession();
 
+  console.log(data)
   return (
     <div className="space-y-10  ">
       <Head>
@@ -93,19 +94,23 @@ function Home({ providers }) {
         </div>
       </main>
 
-      {status  === "authenticated" && <HeroSecondary/>}
+      {status  === "authenticated" && <HeroSecondary user={data}/>}
     </div>
   );
 }
 
 export default Home;
 
-export async function getServerSideProps(context) {
-  const providers = await getProviders();
+export async function getServerSideProps() {
+  // Simulate fetching data from an API or database
+  // Replace this with your actual data fetching logic
+  let data = await fetch("https://backend-assginment-python-f2be.vercel.app/");
+   data = await data.json();
+
 
   return {
     props: {
-      providers,
+      data,
     },
   };
 }
