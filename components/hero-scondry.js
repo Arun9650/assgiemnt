@@ -25,8 +25,7 @@ const HeroSecondary = ({ user }) => {
   const userInfor = slides.items?.map((item) => (
     <div
       key={item._id}
-      className={`grid grid-cols-2  min-w-full `}
-    >
+      className="grid grid-cols-2  min-w-full ">
       <div className="flex flex-col items-start justify-center p-4 ">
         <p style={{ fontSize: "40px", color: "#8f5849" }}>{item.heading}</p>
         <p style={{ fontSize: "32px" }} className="font-light max-w-xl ">
