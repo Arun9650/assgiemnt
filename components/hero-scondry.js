@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import userImage from "../../public/user.png";
+import userImage from "../public/user.png";
 import Image from "next/image";
 
 const HeroSecondary = ({ user }) => {

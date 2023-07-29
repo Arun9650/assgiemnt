@@ -12,7 +12,7 @@ import jobsIcon from "../../public/jobsIcon.svg";
 import Link from "next/link";
 import Component from "../../components/auth";
 
-import HeroSecondary from './hero-scondry'
+import HeroSecondary from '../../components/hero-scondry'
 
 function Home({ data }) {
   const { data: session,status  } = useSession();
