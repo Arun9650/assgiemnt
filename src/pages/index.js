@@ -87,7 +87,7 @@ function Home({ data }) {
           </div>
         </div>
 
-        <div className="relative xl:absolute w-80 h-80 md:w-[600px] md:h-[600px] xl:w-[650px] xl:h-[650px] top-14 right-5">
+        <div className="relative xl:absolute w-80 h-80 md:w-[600px] md:h-[600px] xl:w-[650px] xl:h-[650px] top-32 right-5">
           <Image src={userImage}  priority alt="asd" />
         </div>
       </main>
