@@ -23,17 +23,16 @@ const HeroSecondary = ({ user }) => {
   };
 
   const userInfor = slides.items?.map((item) => (
-    <div
-      key={item._id}
-      className="grid grid-cols-2  min-w-full ">
-      <div className="flex flex-col items-start justify-center p-4 ">
-        <p style={{ fontSize: "40px", color: "#8f5849" }}>{item.heading}</p>
-        <p style={{ fontSize: "32px" }} className="font-light max-w-xl ">
+    <div key={item._id}  className="flex flex-col-reverse sm:grid grid-cols-2  min-w-full ">
+      <div className="flex flex-col items-start w-full   justify-center p-4 ">
+        <div  className="text-[#8f5849] text-4xl sm:text-5xl heading">{item.heading}</div>
+
+        <h4  className="font-light max-w-xl text-2xl my-3 sm:text-4xl ">
           {item.subheading}
-        </p>
+        </h4>
       </div>
-      <div className="">
-        <div>
+      <div className="mx-auto   ">
+        <div className="flex gap-4">
           <button onClick={goToPrevious}>Previous</button>
           <button onClick={goToNext}>Next</button>
         </div>
@@ -47,10 +46,10 @@ const HeroSecondary = ({ user }) => {
   }
 
   return (
-    <div className=" h-screen  relative py-4 flex items-center  justify-center">
+    <div className=" min-h-screen  relative py-4 flex items-center  justify-center">
       <div className="max-w-[1400px]  w-full">
         <div
-          className={`flex  shadow-md p-3  border rounded items-center justify-start overflow-hidden `}
+          className={`flex  shadow-md p-3   rounded items-center justify-start overflow-hidden `}
         >
           {userInfor[currentIndex]}
         </div>
